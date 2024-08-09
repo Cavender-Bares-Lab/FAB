@@ -1,0 +1,41 @@
+Type: Package
+Package: FAB
+Title: Data processing for Forest and Biodiversity Experiments
+Version: 0.1.0
+Author: c(person(given = "J. Antonio",
+             family = "Guzmán Q.",
+             role = c("cre", "aut", "cph"),
+             email = "antguz06@gmail.com",
+             comment = c(ORCID = "0000-0002-0721-148X")),
+             person(given = "Jeannine",
+             family = "Cavender-Bares",
+             role = "aut",
+             email = "jcavender@fas.harvard.edu",
+             comment = c(ORCID = "0000-0003-3375-9630")))
+Maintainer: The package maintainer antguz06@gmail.com>
+Description: A set of tools to process and derive 
+             metrics from inventories conducted at Forest and Biodiversity Experiments.
+             Its creation is based on key calculations such as mortaliy or 
+             Net Biodiversity Effects.
+License: GPL (>= 3)
+URL: https://github.com/Cavender-Bares-Lab/FAB
+BugReports: https://github.com/Cavender-Bares-Lab/FAB/issues
+Depends: 
+    data.table (>= 1.0),
+    R (>= 4.0.0)
+Imports:
+    ggplot2 (>= 3.4.0), 
+Suggests: 
+    knitr,
+    rmarkdown,
+    covr,
+    testthat (>= 3.0.1)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: bzip2
+RoxygenNote: 7.1.2
+SystemRequirements: GNU make
+ByteCompile: true
+Config/testthat/edition: 3
