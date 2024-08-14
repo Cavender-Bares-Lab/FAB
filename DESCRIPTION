@@ -12,7 +12,7 @@ Author: c(person(given = "J. Antonio",
              role = "aut",
              email = "jcavender@fas.harvard.edu",
              comment = c(ORCID = "0000-0003-3375-9630")))
-Maintainer: The package maintainer antguz06@gmail.com>
+Maintainer: The package maintainer antguz06@gmail.com
 Description: A set of tools to process and derive 
              metrics from inventories conducted at Forest and Biodiversity Experiments.
              Its creation is based on key calculations such as mortaliy or 
