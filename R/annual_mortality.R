@@ -15,9 +15,6 @@
 #' @importFrom data.table data.table
 #'
 #' @examples
-
-inventory <- fread("data/FAB2_growth.csv")
-
 annual_mortality <- function(inventory, per_species = FALSE) {
   
   frame <- inventory

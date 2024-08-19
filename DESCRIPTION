@@ -1,8 +1,9 @@
-Type: Package
 Package: FAB
-Title: Data processing for Forest and Biodiversity Experiments
-Version: 0.1.0
-Author: c(person(given = "J. Antonio",
+Version: 0.1-0
+Type: Package
+Date: 2024-08-19
+Title: Data Processing and visualization for Forest and Biodiversity Experiments
+Authors@R: c(person(given = "J. Antonio",
              family = "Guzmán Q.",
              role = c("cre", "aut", "cph"),
              email = "antguz06@gmail.com",
@@ -12,9 +13,11 @@ Author: c(person(given = "J. Antonio",
              role = "aut",
              email = "jcavender@fas.harvard.edu",
              comment = c(ORCID = "0000-0003-3375-9630")))
-Maintainer: The package maintainer antguz06@gmail.com
-Description: A set of tools to process and derive 
-             metrics from inventories conducted at Forest and Biodiversity Experiments.
+Author: J. Antonio Guzman Q. [aut, cre, cph],
+        Jeannine Cavender-Bares [aut]
+Maintainer: J. Antonio Guzman Q. <antguz06@gmail.com>
+Description: A set of tools to process and vizualize metrics derived inventories 
+             conducted at Forest and Biodiversity Experiments.
              Its creation is based on key calculations such as mortaliy or 
              Net Biodiversity Effects.
 License: GPL (>= 3)
@@ -35,7 +38,7 @@ VignetteBuilder:
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: bzip2
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 SystemRequirements: GNU make
 ByteCompile: true
 Config/testthat/edition: 3

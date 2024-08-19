@@ -1,8 +1,8 @@
 Version: 1.0
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
+RestoreWorkspace: No
+SaveWorkspace: No
+AlwaysSaveHistory: No
 
 EnableCodeIndexing: Yes
 UseSpacesForTab: Yes
@@ -10,8 +10,13 @@ NumSpacesForTab: 2
 Encoding: UTF-8
 
 RnwWeave: knitr
-LaTeX: XeLaTeX
+LaTeX: pdfLaTeX
 
 BuildType: Package
 PackageUseDevtools: Yes
 PackageInstallArgs: --no-multiarch --with-keep.source
+PackageRoxygenize: rd,collate,namespace
+
+SpellingDictionary: en_US
+
+ProjectName: FAB

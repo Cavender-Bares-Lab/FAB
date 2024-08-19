@@ -31,10 +31,6 @@
 #' @importFrom data.table as.data.table
 #' @importFrom data.table data.table
 
-
-experiment_design <- fread("data/experiment_design.csv")
-measured_feature <- fread("data/measured_feature.csv")
-
 NBE <- function(experiment_design, measured_feature) {
   
   # Test for failures
