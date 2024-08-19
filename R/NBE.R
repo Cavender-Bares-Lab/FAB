@@ -3,7 +3,8 @@
 ################################################################################
 
 #' @description It estimate the Net Biodiversity Effect (NBE) its two components: 
-#' complementary effect (CE) and selection effect (SE).
+#' complementary effect (CE) and selection effect (SE). This function is based
+#' on Loreau & Hector (2001) <doi:10.1038/35083573>.
 #' 
 #' @param experiment_design A \code{data.frame} with columns representing species 
 #' and rows representing plots. Each cell most contain relative abundance of species
@@ -12,12 +13,18 @@
 #' 
 #' @param measured_feature If it is a \code{data.frame} should 
 #' describe measurements at the species level (e.g., biomass, growth rates), with 
-#' columns as species and rows as plots similar to \code{experiment_design}. If it
-#' is a numeric vector it should describe measured feature at the community level.
+#' columns as species and rows as plots similar to \code{experiment_design}. Each 
+#' cell most contain the measured feature; use \code{NA} if not feature was measured.
+#' If it is a numeric vector it should describe measured feature at the 
+#' community level.
 #'
 #' @return A data.table with the estimations of Net biodiversity effect (NBE) and 
 #' its two components: complementary effect (CE) and selection effect (SE) per 
 #' plot.
+#' 
+#' @references Loreau, M., Hector, A. 2001. Partitioning selection and 
+#' complementarity in biodiversity experiments. Nature 412, 72–76 (2001).
+#'  <doi:10.1038/35083573>
 #'
 #' @author J. Antonio Guzmán Q. and Laura Williams
 #' 
@@ -27,7 +34,6 @@
 
 experiment_design <- fread("data/experiment_design.csv")
 measured_feature <- fread("data/measured_feature.csv")
-measured_feature <- rnorm(nrow(measured_feature), 5, 2)
 
 NBE <- function(experiment_design, measured_feature) {
   
@@ -45,6 +51,7 @@ NBE <- function(experiment_design, measured_feature) {
   ## Step 1
   # Identify monocultures
   monocultures <- apply(experiment_design, 1, function(i) sum(i>0))
+  n_sp <- monocultures
   monocultures <- monocultures == 1
   
   # Get features per monoculture
@@ -64,10 +71,41 @@ NBE <- function(experiment_design, measured_feature) {
     
   }
   
+  ## Step2
+  # Expected community features
+  expected <- experiment_design * monocultures_mean
+  expected[expected == 0] <- NA
   
+  ## Step3 
+  # Define observed and predicted
+  plot <- data.table(plot = rownames(experiment_design),
+                     nsp = n_sp,
+                     CE = NA,
+                     SE = NA,
+                     NE = NA)
   
+  ## Step 4
+  # Estimate NBE
+  idplots <- unique(plot$plot)
   
+  for(i in 1:length(idplots)) {
+    
+    # Number of species
+    Y <- na.exclude(as.numeric(measured_feature[i,]))
+    M <- na.exclude(as.numeric(expected[i,]))
+    N <- n_sp[i]
+    dRY <- (Y/M) - (1/N)
+    covar <- sum((dRY-mean(dRY)) * (M-mean(M)))/N
+    SE <- N*covar
+    CE <- N*mean(dRY)*mean(M)
+    NE <- SE + CE
+    
+    plot$NE[i] <- NE
+    plot$CE[i] <- CE
+    plot$SE[i] <- SE
+    
+  }
   
-  
+  return(plot)
   
 }
