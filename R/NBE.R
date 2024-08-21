@@ -1,7 +1,5 @@
-################################################################################
 #' @title Net biodiversity Effect
-################################################################################
-
+#' 
 #' @description It estimate the Net Biodiversity Effect (NBE) its two components: 
 #' complementary effect (CE) and selection effect (SE). This function is based
 #' on Loreau & Hector (2001) <doi:10.1038/35083573>.
