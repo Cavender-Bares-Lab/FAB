@@ -2,8 +2,8 @@
 #'
 #' @description It computes the annual mortality on plots since its established.
 #'
-#' @param inventory A \code{data.table} or \code{data.frame}. It most contain four columns
-#' labeled: 'block', 'plot', 'species', and 'dead'.
+#' @param inventory A \code{data.table} or \code{data.frame} with the inventory data. 
+#' It most contain four columns labeled: 'block', 'plot', 'species', and 'dead'.
 #' @param per_species Logic. If \code{TRUE}, it estimate the mortality per species
 #' whitin plots.
 #'

@@ -1,7 +1,5 @@
-################################################################################
 #' @title Experimental layout
-################################################################################
-
+#' 
 #' @description It creates a pdf of the experiment layout of individuals within 
 #' plots. Useful as a field guide.
 #' 
