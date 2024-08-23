@@ -14,7 +14,7 @@
 #' @importFrom data.table rbind
 #' @importFrom data.table data.table
 #'
-#' @examples
+#' @export
 annual_mortality <- function(inventory, per_species = FALSE) {
   
   frame <- inventory

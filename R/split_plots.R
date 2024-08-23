@@ -13,7 +13,8 @@
 #' @return A \code{data.table) with the subplots. The function will add a new column 
 #' with the new plot id ('plot_new) and will modify the row and column number based
 #' on the new plots.
-
+#' 
+#' @export
 split_plots <- function(inventory) {
   
   # Make a copy

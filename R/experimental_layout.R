@@ -13,7 +13,8 @@
 #' @return A \code{PDF} with describing the distribution of individuals within 
 #' each plot.
 #' @importFrom ggplot2 ggplot
-
+#' 
+#' @export
 experimental_layout <- function(design, outfile = NULL) {
   
   # Plot function

@@ -28,7 +28,8 @@
 #' 
 #' @importFrom data.table as.data.table
 #' @importFrom data.table data.table
-
+#' 
+#' @export
 NBE <- function(experiment_design, measured_feature) {
   
   # Test for failures

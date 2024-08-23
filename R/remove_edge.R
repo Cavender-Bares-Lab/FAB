@@ -8,7 +8,8 @@
 #' three columns labeled: 'plot', 'row', and 'columns'.
 #' 
 #' @return A \code{data.table} without at the edge line of the plots.
-
+#' 
+#' @export
 remove_edge <- function(inventory) {
   
   # Makes a copy

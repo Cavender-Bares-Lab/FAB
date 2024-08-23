@@ -1,8 +1,8 @@
 Package: FAB
-Version: 0.1-0
 Type: Package
+Title: Data Processing and Visualization for Forest and Biodiversity Experiments
+Version: 0.1.0
 Date: 2024-08-19
-Title: Data Processing and visualization for Forest and Biodiversity Experiments
 Authors@R: c(person(given = "J. Antonio",
              family = "Guzmán Q.",
              role = c("cre", "aut", "cph"),
