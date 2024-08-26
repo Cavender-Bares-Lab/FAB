@@ -3,7 +3,7 @@ Type: Package
 Title: Data Processing and Visualization for Forest and Biodiversity Experiments
 Version: 0.1.0
 Date: 2024-08-19
-Authors@R: c(person(given = "J. Antonio",
+Authors: c(person(given = "J. Antonio",
              family = "Guzmán Q.",
              role = c("cre", "aut", "cph"),
              email = "antguz06@gmail.com",
@@ -13,13 +13,10 @@ Authors@R: c(person(given = "J. Antonio",
              role = "aut",
              email = "jcavender@fas.harvard.edu",
              comment = c(ORCID = "0000-0003-3375-9630")))
-Author: J. Antonio Guzman Q. [aut, cre, cph],
-        Jeannine Cavender-Bares [aut]
 Maintainer: J. Antonio Guzman Q. <antguz06@gmail.com>
-Description: A set of tools to process and vizualize metrics derived inventories 
-             conducted at Forest and Biodiversity Experiments.
-             Its creation is based on key calculations such as mortaliy or 
-             Net Biodiversity Effects.
+Description: A set of tools to process and vizualize inventories conducted at 
+             Forest and Biodiversity Experiments. Its creation is based on key 
+             calculations such as mortaliy or Net Biodiversity Effects.
 License: GPL (>= 3)
 URL: https://github.com/Cavender-Bares-Lab/FAB
 BugReports: https://github.com/Cavender-Bares-Lab/FAB/issues
@@ -28,6 +25,7 @@ Depends:
     R (>= 4.0.0)
 Imports:
     ggplot2 (>= 3.4.0), 
+    picante
 Suggests: 
     knitr,
     rmarkdown,
