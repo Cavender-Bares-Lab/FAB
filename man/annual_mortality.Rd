@@ -7,8 +7,9 @@
 annual_mortality(inventory, per_species = FALSE)
 }
 \arguments{
-\item{inventory}{A \code{data.table} or \code{data.frame} with the inventory data. 
-It most contain four columns labeled: 'block', 'plot', 'species', and 'dead'.}
+\item{inventory}{A \code{data.table} or \code{data.frame} with the inventory data.
+It most contain five columns labeled: 'block', 'plot', 'species', 'measurement_date',
+and 'deadmissing'.}
 
 \item{per_species}{Logic. If \code{TRUE}, it estimate the mortality per species
 whitin plots.}

@@ -6,7 +6,7 @@
 #' It most contain three columns labeled: 'plot', 'row', and 'column'.
 #' Only use plots that require splitting into subplots.
 #'
-#' @returns A \code{data.table) with the subplots. The function will add a new column
+#' @returns A \code{data.table} with the subplots. The function will add a new column
 #' with the new plot id ('plot_new') and will modify the row and column number based
 #' on the new plots.
 #'

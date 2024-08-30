@@ -12,7 +12,9 @@ It most contain three columns labeled: 'plot', 'row', and 'column'.
 Only use plots that require splitting into subplots.}
 }
 \value{
-
+A \code{data.table} with the subplots. The function will add a new column
+with the new plot id ('plot_new') and will modify the row and column number based
+on the new plots.
 }
 \description{
 It split large plots into four subplots.

@@ -12,7 +12,7 @@
 #'
 #' @author J. Antonio Guzmán Q.
 #'
-#' @importFrom data.table rbind
+#' @importFrom data.table rbindlist
 #' @importFrom data.table data.table
 #'
 #' @export

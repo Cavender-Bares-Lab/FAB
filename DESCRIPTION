@@ -25,7 +25,7 @@ Depends:
     R (>= 4.0.0)
 Imports:
     ggplot2 (>= 3.4.0), 
-    picante
+    picante (>= 1.8.2)
 Suggests: 
     knitr,
     rmarkdown,

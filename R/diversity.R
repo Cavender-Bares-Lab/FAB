@@ -19,7 +19,7 @@
 #' of similarity of traits among species. If you use this function in your work,
 #' please also acknowledge \code{picante} package.
 #'
-#' @References
+#' @references
 #' Faith D.P. (1992) Conservation evaluation and phylogenetic diversity.
 #' Biological Conservation, 61, 1-10.
 #'
@@ -31,7 +31,11 @@
 #' @author J. Antonio Guzmán Q.
 #'
 #' @importFrom data.table data.table
-#' @importFrom picante
+#' @importFrom picante psv
+#' @importFrom picante psr
+#' @importFrom picante pse
+#' @importFrom picante psc
+#' @importFrom picante pd
 #'
 #' @examples
 diversity <- function(inventory,

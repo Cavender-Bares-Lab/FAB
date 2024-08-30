@@ -33,6 +33,13 @@ please also acknowledge \code{picante} package.
 \examples{
 Create file for compile results
 }
+\references{
+Faith D.P. (1992) Conservation evaluation and phylogenetic diversity.
+Biological Conservation, 61, 1-10.
+
+Helmus M.R., Bland T.J., Williams C.K. & Ives A.R. (2007) Phylogenetic
+measures of biodiversity. American Naturalist, 169, E68-E83
+}
 \author{
 J. Antonio Guzmán Q.
 }
