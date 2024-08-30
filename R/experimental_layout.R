@@ -1,16 +1,16 @@
-#' @title Experimental layout
+#' @title Experimental Layout
 #'
-#' @description It creates a pdf of the experiment layout of individuals within
+#' @description It creates a pdf of the experimental layout showing individual trees within
 #' plots. Useful as a field guide.
 #'
 #' @param design A \code{data.frame} or \code{data.table} with the description
 #' of the experimental layout. It most contain columns with the labels: "block",
 #' "plot", "species", "row", and "column".
 #'
-#' @param output A path and name of the file to export. If \code{NULL}, it will
-#' export a pdf to current working directory under \code{layout.pdf}.
+#' @param output A path and name of the file to export. If \code{NULL}; it will
+#' export a pdf to the current working directory under \code{layout.pdf}.
 #'
-#' @return A \code{PDF} with describing the distribution of individuals within
+#' @return A \code{PDF} describing the distribution of individuals within
 #' each plot.
 #'
 #' @importFrom ggplot2 ggplot
