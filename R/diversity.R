@@ -26,6 +26,9 @@
 #' Helmus M.R., Bland T.J., Williams C.K. & Ives A.R. (2007) Phylogenetic
 #' measures of biodiversity. American Naturalist, 169, E68-E83
 #'
+#' Cavender-Bares, J., and P. B. Reich. 2012. Shocks to the system: Community assembly of the oak savanna in a 40‐year fire frequency experiment. Ecology 93:S52 - S69.
+#' Cadotte, M. W., J. Cavender-Bares, D. Tilman, and T. H. Oakley. 2009. Using phylogenetic, functional and trait diversity to understand patterns of plant community productivity. Plos One 4:e5695.
+#'
 #' @returns It returns a \code{data.table} with metrics of diversity.
 #'
 #' @author J. Antonio Guzmán Q.
