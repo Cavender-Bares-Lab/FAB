@@ -2,13 +2,13 @@
 % Please edit documentation in R/diversity.R
 \name{diversity}
 \alias{diversity}
-\title{Pyhlogenetic or Functional Diversity}
+\title{Phylogenetic and Functional Diversity}
 \usage{
 diversity(inventory, tree = NULL, weight = c("abundance", "n_indiviuals"))
 }
 \arguments{
 \item{inventory}{A \code{data.table} or \code{data.frame} with the inventory data.
-It most contain three columns: 'plot', 'species', and 'values'; in that order.
+It must contain three columns: 'plot', 'species', and 'values'; in that order.
 The last column should be the metric used to weight diversity estimations
 (e.g., DBH, above ground biomass, or volume).}
 
@@ -18,7 +18,7 @@ The last column should be the metric used to weight diversity estimations
 It returns a \code{data.table} with metrics of diversity.
 }
 \description{
-Derive diversity metrics from phylogenetic trees or cluster trees
+Derives diversity metrics from phylogenetic trees or hierarchical-cluster trees
 of plant traits. This is a function that encapsulate functions from \code{picante}.
 }
 \details{
@@ -39,6 +39,9 @@ Biological Conservation, 61, 1-10.
 
 Helmus M.R., Bland T.J., Williams C.K. & Ives A.R. (2007) Phylogenetic
 measures of biodiversity. American Naturalist, 169, E68-E83
+
+Cavender-Bares, J., and P. B. Reich. 2012. Shocks to the system: Community assembly of the oak savanna in a 40‐year fire frequency experiment. Ecology 93:S52 - S69.
+Cadotte, M. W., J. Cavender-Bares, D. Tilman, and T. H. Oakley. 2009. Using phylogenetic, functional and trait diversity to understand patterns of plant community productivity. Plos One 4:e5695.
 }
 \author{
 J. Antonio Guzmán Q.

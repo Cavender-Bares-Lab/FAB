@@ -1,10 +1,10 @@
-#' @title Pyhlogenetic or Functional Diversity
+#' @title Phylogenetic and Functional Diversity
 #'
-#' @description Derives diversity metrics from phylogenetic trees or cluster trees
+#' @description Derives diversity metrics from phylogenetic trees or hierarchical-cluster trees
 #' of plant traits. This is a function that encapsulate functions from \code{picante}.
 #'
 #' @param inventory A \code{data.table} or \code{data.frame} with the inventory data.
-#' It most contain three columns: 'plot', 'species', and 'values'; in that order.
+#' It must contain three columns: 'plot', 'species', and 'values'; in that order.
 #' The last column should be the metric used to weight diversity estimations
 #' (e.g., DBH, above ground biomass, or volume).
 #'

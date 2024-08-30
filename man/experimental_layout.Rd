@@ -2,7 +2,7 @@
 % Please edit documentation in R/experimental_layout.R
 \name{experimental_layout}
 \alias{experimental_layout}
-\title{Experimental layout}
+\title{Experimental Layout}
 \usage{
 experimental_layout(design, outfile = NULL)
 }
@@ -11,14 +11,14 @@ experimental_layout(design, outfile = NULL)
 of the experimental layout. It most contain columns with the labels: "block",
 "plot", "species", "row", and "column".}
 
-\item{output}{A path and name of the file to export. If \code{NULL}, it will
-export a pdf to current working directory under \code{layout.pdf}.}
+\item{output}{A path and name of the file to export. If \code{NULL}; it will
+export a pdf to the current working directory under \code{layout.pdf}.}
 }
 \value{
-A \code{PDF} with describing the distribution of individuals within
+A \code{PDF} describing the distribution of individuals within
 each plot.
 }
 \description{
-It creates a pdf of the experiment layout of individuals within
+It creates a pdf of the experimental layout showing individual trees within
 plots. Useful as a field guide.
 }
