@@ -1,6 +1,6 @@
 #' @title Pyhlogenetic or Functional Diversity
 #'
-#' @description Derive diversity metrics from phylogenetic trees or cluster trees
+#' @description Derives diversity metrics from phylogenetic trees or cluster trees
 #' of plant traits. This is a function that encapsulate functions from \code{picante}.
 #'
 #' @param inventory A \code{data.table} or \code{data.frame} with the inventory data.
