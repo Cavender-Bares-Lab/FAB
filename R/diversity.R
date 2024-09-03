@@ -8,14 +8,19 @@
 #' The last column should be the metric used to weight diversity estimations
 #' (e.g., DBH, above ground biomass, or volume).
 #'
-#' @param tree A \code{phylo} tree object, or a phylogenetic covariance matrix.
+#' @param phylo_tree A \code{phylo} tree object.
 #'
 #' @param functional_traits A \code{data.table} with functional
 #' trait data per columns and species rows. The first column must be labeled as
 #' 'species', with species that match those from \code{inventory}.
 #'
+#' @param weigth  A character with two options (\code{"n_indiviuals"} or \code{"abundance"}) to
+#' estimate abundance-weighted metrics based on the number of individuals or the 'value' column of
+#' \code{inventory}.
+#'
 #' @param scale_traits Logic. If \code{TRUE} and \code{functional_traits} is not \code{NULL},
 #' it scales \code{traits}.
+#'
 #'
 #' @details
 #' The function first summarize forest inventories, then it calculate metrics
