@@ -2,33 +2,48 @@
 % Please edit documentation in R/diversity.R
 \name{diversity}
 \alias{diversity}
-\title{Pyhlogenetic or Functional Diversity}
+\title{Phylogenetic and Functional Diversity}
 \usage{
-diversity(inventory, tree = NULL, weight = c("abundance", "n_indiviuals"))
+diversity(
+  inventory,
+  phylo_tree = NULL,
+  functional_traits = NULL,
+  weight = c("abundance", "n_indiviuals"),
+  scale_traits = FALSE
+)
 }
 \arguments{
-\item{inventory}{A \code{data.table} or \code{data.frame} with the inventory data.
-It most contain three columns: 'plot', 'species', and 'values'; in that order.
+\item{inventory}{A \code{data.table} with the inventory data.
+It must contain three columns: 'plot', 'species', and 'values'; in that order.
 The last column should be the metric used to weight diversity estimations
 (e.g., DBH, above ground biomass, or volume).}
 
-\item{tree}{A \code{phylo} tree object,  or a phylogenetic covariance matrix.}
+\item{functional_traits}{A \code{data.table} with functional
+trait data per columns and species rows. The first column must be labeled as
+'species', with species that match those from \code{inventory}.}
+
+\item{scale_traits}{Logic. If \code{TRUE} and \code{functional_traits} is not \code{NULL},
+it scales \code{traits}.}
+
+\item{tree}{A \code{phylo} tree object, or a phylogenetic covariance matrix.}
 }
 \value{
 It returns a \code{data.table} with metrics of diversity.
 }
 \description{
-Derives diversity metrics from phylogenetic trees or cluster trees
+Derives diversity metrics from phylogenetic trees or hierarchical-cluster trees
 of plant traits. This is a function that encapsulate functions from \code{picante}.
 }
 \details{
 The function first summarize forest inventories, then it calculate metrics
-of species richness (SR), phylogenetic species variability (PSV),
-phylogenetic species richness (PSR), phylogenetic species evenness (PSE),
-phylogenetic species clustering (PSC), and Faith's phylogenetic diversity. Similar
-metrics can be derived on functional information, but using an \code{hclust} tree
-of similarity of traits among species. If you use this function in your work,
-please also acknowledge \code{picante} package.
+of species richness (SR), phylogenetic or functional species variability (PSV or FSV),
+phylogenetic or functional species richness (PSR or FSR), phylogenetic or Functional
+species evenness (PSE or FSE), phylogenetic or functional species clustering (PSC or FSC),
+and Faith's phylogenetic or functional diversity including or not its root, and
+the observed Mean Pairwise Distances between communities (MPD). These metrics can be
+derived on functional information, but using an \code{hclust} tree
+of similarity of traits among species following (Cavender-Bares et al. 2012).
+If you use this function in your work, please also acknowledge \code{picante} package.
 }
 \examples{
 Create file for compile results
@@ -40,9 +55,14 @@ Biological Conservation, 61, 1-10.
 Helmus M.R., Bland T.J., Williams C.K. & Ives A.R. (2007) Phylogenetic
 measures of biodiversity. American Naturalist, 169, E68-E83
 
-Cavender-Bares, J., and P. B. Reich. 2012. Shocks to the system: Community assembly of the oak savanna in a 40‐year fire frequency experiment. Ecology 93:S52 - S69.
-Cadotte, M. W., J. Cavender-Bares, D. Tilman, and T. H. Oakley. 2009. Using phylogenetic, functional and trait diversity to understand patterns of plant community productivity. Plos One 4:e5695.
+Cavender-Bares, J., and P. B. Reich. 2012. Shocks to the system: Community
+assembly of the oak savanna in a 40‐year fire frequency experiment.
+Ecology 93:S52 - S69.
+
+Cadotte, M. W., J. Cavender-Bares, D. Tilman, and T. H. Oakley. 2009. Using
+phylogenetic, functional and trait diversity to understand patterns of plant
+community productivity. Plos One 4:e5695.
 }
 \author{
-J. Antonio Guzmán Q.
+Jeannine Cavender-Bares and J. Antonio Guzmán Q.
 }
