@@ -26,9 +26,9 @@ experimental_layout <- function(design, outfile = NULL) {
       geom_text(hjust= 0.5, vjust= .5) +
       scale_x_continuous(n.breaks = max(plotoi$column)) +
       scale_y_reverse(n.breaks = max(plotoi$row)) +
-      theme_bw(base_size = 14) +
-      labs(title = paste0("Plot: ", plotoi$plot[i]),
-           subtitle = paste0("Block: ", plotoi$block[i]))
+      theme_bw(base_size = 12) +
+      labs(title = paste0("Plot: ", plotoi$plot[1]),
+           subtitle = paste0("Block: ", plotoi$block[1], " Plot size (m2): ", plotoi$Area_m2[1]))
 
     return(p)
 
@@ -49,7 +49,7 @@ experimental_layout <- function(design, outfile = NULL) {
 
   for (i in 1:length(plot_id)) {
 
-    plotoi <- design[plot == plot_id[i]]
+    plotoi <- design[plot == plot_id[i], ]
     print(plot_function(plotoi))
 
   }
