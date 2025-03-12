@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13800914.svg)](https://doi.org/10.5281/zenodo.13800914)
+
 # FAB
 Data Processing and Visualization for Forest and Biodiversity Experiments
 
@@ -34,17 +36,17 @@ devtools::install_github("Cavender-Bares-Lab/FAB", INSTALL_opts= c("--no-multiar
 ### Citation
 
 If you use this package in your research, please cite [Zenodo
-record](https://doi.org/XXX):
+record](https://doi.org/10.5281/zenodo.13800914):
 
 ```
 @software{makecite,
   author       = {Guzmán, J.A., and Cavender-Bares, J.},
-  title        = {Data Processing and Visualization for Forest and Biodiversity Experiments},
-  month        = August,
+  title        = {FAB: Data Processing and Visualization for Forest and Biodiversity Experiments},
+  month        = September,
   year         = 2024,
   publisher    = {Zenodo},
   version      = {v0.1.0},
-  doi          = {10.5281/XXX},
-  url          = {https://doi.org/XXX}
+  doi          = {10.5281/zenodo.13800914},
+  url          = {https://doi.org/10.5281/zenodo.13800914}
 }
 ```
