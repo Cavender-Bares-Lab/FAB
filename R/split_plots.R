@@ -15,10 +15,10 @@
 #' continuously from 0 to the max number of rows and columns.
 #'
 #' @export
-split_plots <- function(inventory) {
+split_plots <- function(inventory_large) {
 
   # Make a copy
-  frame <- inventory
+  frame <- inventory_large
 
   # Identify range
   vtree_lines <- unique(frame$row)

@@ -1,7 +1,7 @@
 Package: FAB
 Type: Package
 Title: Data Processing and Visualization for Forest and Biodiversity Experiments
-Version: 0.1.0
+Version: 0.1.1
 Date: 2024-08-19
 Authors: c(person(given = "J. Antonio",
              family = "Guzmán Q.",

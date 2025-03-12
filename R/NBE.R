@@ -53,7 +53,7 @@ NBE <- function(experiment_design, measured_feature) {
   if(is.data.frame(measured_feature) == TRUE) {
 
     monocultures_features <- measured_feature[monocultures == TRUE, ]
-    monocultures_features[monocultures_features == 0] <- NA
+    # monocultures_features[monocultures_features == 0] <- NA
     monocultures_mean <- colMeans(monocultures_features, na.rm = TRUE)
 
   } else if(is.numeric(measured_feature) == TRUE) {
@@ -68,7 +68,7 @@ NBE <- function(experiment_design, measured_feature) {
 
   ## Step2
   # Expected community features
-  expected <- experiment_design * monocultures_mean
+  expected <- t(t(experiment_design) * monocultures_mean)
   expected[expected == 0] <- NA
 
   ## Step3

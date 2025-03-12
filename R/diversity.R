@@ -14,7 +14,7 @@
 #' trait data per columns and species rows. The first column must be labeled as
 #' 'species', with species that match those from \code{inventory}.
 #'
-#' @param weigth  A character with two options (\code{"n_indiviuals"} or \code{"abundance"}) to
+#' @param weight  A character with two options (\code{"n_indiviuals"} or \code{"abundance"}) to
 #' estimate abundance-weighted metrics based on the number of individuals or the 'value' column of
 #' \code{inventory}.
 #'
@@ -64,7 +64,7 @@
 diversity <- function(inventory,
                       phylo_tree = NULL,
                       functional_traits = NULL,
-                      weight = c("abundance", "n_indiviuals"),
+                      weight,
                       scale_traits = FALSE) {
 
   #-----------------------------------------------------
@@ -79,7 +79,7 @@ diversity <- function(inventory,
                                total_value = sum(value, na.rm = TRUE)),
                            by = c("plot", "species")]
 
-  if(weigth == "abundance") {
+  if(weight == "abundance") {
 
     # From rows summary to matrix
     community <- species_summary[, c("plot", "total_value", "species")]
@@ -106,7 +106,7 @@ diversity <- function(inventory,
   if(is.null(phylo_tree) == FALSE) {
 
     # Maching with communities and tree
-    matched <- match.phylo.comm(phy = tree,
+    matched <- match.phylo.comm(phy = phylo_tree,
                                 comm = community)
 
     # Derive metrics
@@ -129,9 +129,9 @@ diversity <- function(inventory,
                                   matched$phy,
                                   include.root=TRUE)$PD
 
-    frame_diversity$P_faith.no.root <- pd(matched$comm,
-                                          matched$phy,
-                                          include.root=FALSE)
+    # frame_diversity$P_faith.no.root <- pd(matched$comm,
+    #                                       matched$phy,
+    #                                       include.root=FALSE)
 
     frame_diversity$P_MPD <- ses.mpd(matched$comm,
                                      cophenetic.phylo(matched$phy),
@@ -139,13 +139,12 @@ diversity <- function(inventory,
                                      abundance.weighted = TRUE,
                                      runs = 100)$mpd.obs
 
-    return(frame)
-
+    return(frame_diversity)
 
     #-----------------------------------------------------
     # Deal if functional data
 
-  } else if(is.null(functional_matrix) == TRUE) {
+  } else if(is.null(functional_traits) == FALSE) {
 
     if(scale_traits == TRUE) {
 
@@ -189,9 +188,9 @@ diversity <- function(inventory,
                                   matched$phy,
                                   include.root=TRUE)$PD
 
-    frame_diversity$F_faith.no.root <- pd(matched$comm,
-                                          matched$phy,
-                                          include.root=FALSE)
+    # frame_diversity$F_faith.no.root <- pd(matched$comm,
+    #                                       matched$phy,
+    #                                       include.root=FALSE)
 
     frame_diversity$F_MPD <- ses.mpd(matched$comm,
                                      cophenetic.phylo(matched$phy),
@@ -199,7 +198,10 @@ diversity <- function(inventory,
                                      abundance.weighted = TRUE,
                                      runs = 100)$mpd.obs
 
-    return(frame)
+    return(frame_diversity)
 
   }
+
+  # return(frame_diversity)
+
 }
