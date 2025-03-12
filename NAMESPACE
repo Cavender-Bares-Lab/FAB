@@ -2,6 +2,7 @@
 
 export(NBE)
 export(annual_mortality)
+export(diversity)
 export(experimental_layout)
 export(remove_edge)
 export(split_plots)
