@@ -67,7 +67,7 @@ diversity <- function(inventory,
                       weight,
                       scale_traits = FALSE) {
 
-  #-----------------------------------------------------
+  #----------------------------------------------------
   # Deal with inventories
 
   # Make a copy and rename
