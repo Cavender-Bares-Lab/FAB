@@ -27,7 +27,7 @@ trait data per columns and species rows. The first column must be labeled as
 \item{scale_traits}{Logic. If \code{TRUE} and \code{functional_traits} is not \code{NULL},
 it scales \code{traits}.}
 
-\item{weigth}{A character with two options (\code{"n_indiviuals"} or \code{"abundance"}) to
+\item{weight}{A character with two options (\code{"n_indiviuals"} or \code{"abundance"}) to
 estimate abundance-weighted metrics based on the number of individuals or the 'value' column of
 \code{inventory}.}
 }
@@ -39,18 +39,18 @@ Derives diversity metrics from phylogenetic trees or hierarchical-cluster trees
 of plant traits. This is a function that encapsulate functions from \code{picante}.
 }
 \details{
-The function first summarize forest inventories, then it calculate metrics
+The function first summarizes forest inventories, then it calculates metrics
 of species richness (SR), phylogenetic or functional species variability (PSV or FSV),
-phylogenetic or functional species richness (PSR or FSR), phylogenetic or Functional
+phylogenetic or functional species richness (PSR or FSR), phylogenetic or functional
 species evenness (PSE or FSE), phylogenetic or functional species clustering (PSC or FSC),
-and Faith's phylogenetic or functional diversity including or not its root, and
+and Faith's phylogenetic or functional diversity including or its root or not, and
 the observed Mean Pairwise Distances between communities (MPD). These metrics can be
-derived on functional information, but using an \code{hclust} tree
+derived from functional information, but using an \code{hclust} tree
 of similarity of traits among species following (Cavender-Bares et al. 2012).
 If you use this function in your work, please also acknowledge \code{picante} package.
 }
 \examples{
-Create file for compile results
+Create file to compile results
 }
 \references{
 Faith D.P. (1992) Conservation evaluation and phylogenetic diversity.
