@@ -18,6 +18,8 @@
 #' @export
 experimental_layout <- function(design, outfile = NULL) {
 
+  colnames(design) <- c("block", "plot", "species", "row", "column")
+
   # Plot function
   plot_function <- function(plotoi) {
 

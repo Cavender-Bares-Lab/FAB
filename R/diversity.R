@@ -23,13 +23,13 @@
 #'
 #'
 #' @details
-#' The function first summarize forest inventories, then it calculate metrics
+#' The function first summarizes forest inventories, then it calculates metrics
 #' of species richness (SR), phylogenetic or functional species variability (PSV or FSV),
-#' phylogenetic or functional species richness (PSR or FSR), phylogenetic or Functional
+#' phylogenetic or functional species richness (PSR or FSR), phylogenetic or functional
 #' species evenness (PSE or FSE), phylogenetic or functional species clustering (PSC or FSC),
-#' and Faith's phylogenetic or functional diversity including or not its root, and
+#' and Faith's phylogenetic or functional diversity including or its root or not, and
 #' the observed Mean Pairwise Distances between communities (MPD). These metrics can be
-#' derived on functional information, but using an \code{hclust} tree
+#' derived from functional information, but using an \code{hclust} tree
 #' of similarity of traits among species following (Cavender-Bares et al. 2012).
 #' If you use this function in your work, please also acknowledge \code{picante} package.
 #'
@@ -97,7 +97,7 @@ diversity <- function(inventory,
 
   }
 
-  #' Create file for compile results
+  #' Create file to compile results
   frame_diversity <- data.table(plot = rownames(community))
 
   #-----------------------------------------------------
